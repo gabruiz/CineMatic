@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Omaggio" table="omaggio" catalog="cinematic" optimistic-lock="version">
+        <id name="idOmaggio" type="int">
+            <column name="idOmaggio" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomeOmaggio" type="string">
+            <column name="nomeOmaggio" not-null="true" />
+        </property>
+        <property name="descrizione" type="string">
+            <column name="descrizione" not-null="true" />
+        </property>
+        <property name="costo" type="int">
+            <column name="costo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Recensionefilm" table="recensionefilm" catalog="cinematic" optimistic-lock="version">
+        <composite-id name="id" class="db_Online.RecensionefilmId">
+            <key-property name="idRecensione" type="int">
+                <column name="idRecensione" />
+            </key-property>
+            <key-property name="idCliente" type="int">
+                <column name="idCliente" />
+            </key-property>
+            <key-property name="idFilm" type="int">
+                <column name="idFilm" />
+            </key-property>
+        </composite-id>
+        <property name="contenuto" type="string">
+            <column name="contenuto" not-null="true" />
+        </property>
+        <property name="valutazione" type="int">
+            <column name="valutazione" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

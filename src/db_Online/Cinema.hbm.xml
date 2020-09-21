@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Cinema" table="cinema" catalog="cinematic" optimistic-lock="version">
+        <id name="idCinema" type="int">
+            <column name="idCinema" />
+            <generator class="assigned" />
+        </id>
+        <property name="idGestore" type="int">
+            <column name="idGestore" not-null="true" />
+        </property>
+        <property name="nomeCinema" type="string">
+            <column name="nomeCinema" length="65535" not-null="true" />
+        </property>
+        <property name="indirizzo" type="string">
+            <column name="indirizzo" length="65535" not-null="true" />
+        </property>
+        <property name="citta" type="string">
+            <column name="citta" length="65535" not-null="true" />
+        </property>
+        <property name="provincia" type="string">
+            <column name="provincia" length="65535" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="65535" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

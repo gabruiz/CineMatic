@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Cliente" table="cliente" catalog="cinematic" optimistic-lock="version">
+        <id name="idCliente" type="int">
+            <column name="idCliente" />
+            <generator class="assigned" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" not-null="true" />
+        </property>
+        <property name="cognome" type="string">
+            <column name="cognome" not-null="true" />
+        </property>
+        <property name="punti" type="int">
+            <column name="punti" not-null="true" />
+        </property>
+        <property name="categoria" type="string">
+            <column name="categoria" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

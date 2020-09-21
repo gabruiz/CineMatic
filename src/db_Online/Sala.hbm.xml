@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Sala" table="sala" catalog="cinematic" optimistic-lock="version">
+        <composite-id name="id" class="db_Online.SalaId">
+            <key-property name="idSala" type="int">
+                <column name="idSala" />
+            </key-property>
+            <key-property name="idCinema" type="int">
+                <column name="idCinema" />
+            </key-property>
+        </composite-id>
+        <property name="nomeSala" type="string">
+            <column name="nomeSala" not-null="true" />
+        </property>
+        <property name="numeroFile" type="int">
+            <column name="numeroFile" not-null="true" />
+        </property>
+        <property name="numeroPosti" type="int">
+            <column name="numeroPosti" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

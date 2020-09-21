@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Film" table="film" catalog="cinematic" optimistic-lock="version">
+        <id name="idFilm" type="int">
+            <column name="idFilm" />
+            <generator class="assigned" />
+        </id>
+        <property name="titolo" type="string">
+            <column name="titolo" not-null="true" />
+        </property>
+        <property name="anno" type="int">
+            <column name="anno" not-null="true" />
+        </property>
+        <property name="trama" type="string">
+            <column name="trama" not-null="true" />
+        </property>
+        <property name="cast" type="string">
+            <column name="cast" not-null="true" />
+        </property>
+        <property name="regista" type="string">
+            <column name="regista" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

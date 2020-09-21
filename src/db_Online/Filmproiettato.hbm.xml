@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Filmproiettato" table="filmproiettato" catalog="cinematic" optimistic-lock="version">
+        <composite-id name="id" class="db_Online.FilmproiettatoId">
+            <key-property name="idFilmProiettato" type="int">
+                <column name="idFilmProiettato" />
+            </key-property>
+            <key-property name="idCinema" type="int">
+                <column name="idCinema" />
+            </key-property>
+        </composite-id>
+        <property name="nomeSala" type="string">
+            <column name="nomeSala" not-null="true" />
+        </property>
+        <property name="titolo" type="string">
+            <column name="titolo" not-null="true" />
+        </property>
+        <property name="ora" type="string">
+            <column name="ora" not-null="true" />
+        </property>
+        <property name="prezzo" type="float">
+            <column name="prezzo" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="tridimensionale" type="boolean">
+            <column name="tridimensionale" not-null="true" />
+        </property>
+        <property name="anteprima" type="boolean">
+            <column name="anteprima" not-null="true" />
+        </property>
+        <property name="postiDisponibili" type="int">
+            <column name="postiDisponibili" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

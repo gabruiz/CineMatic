@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1-mar-2018 12.26.49 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="db_Online.Biglietto" table="biglietto" catalog="cinematic" optimistic-lock="version">
+        <id name="idBiglietto" type="int">
+            <column name="idBiglietto" />
+            <generator class="assigned" />
+        </id>
+        <property name="idCliente" type="int">
+            <column name="idCliente" not-null="true" />
+        </property>
+        <property name="ora" type="string">
+            <column name="ora" not-null="true" />
+        </property>
+        <property name="titolo" type="string">
+            <column name="titolo" not-null="true" />
+        </property>
+        <property name="nomeCinema" type="string">
+            <column name="nomeCinema" not-null="true" />
+        </property>
+        <property name="nomeSala" type="string">
+            <column name="nomeSala" not-null="true" />
+        </property>
+        <property name="importo" type="float">
+            <column name="importo" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="numeroPosto" type="string">
+            <column name="numeroPosto" not-null="true" />
+        </property>
+        <property name="promo" type="string">
+            <column name="promo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
